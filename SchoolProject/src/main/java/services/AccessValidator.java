@@ -1,25 +1,38 @@
-package services;
+package Services;
 
-import models.Student;
-import models.Teacher;
-import repositories.StudentRepository;
-import repositories.TeacherRepository;
+import java.util.List;
+
+import Models.Student;
+import Models.Teacher;
+import Repositories.StudentRepository;
+import Repositories.TeacherRepository;
 
 public class AccessValidator {
     private StudentRepository studentRepository;
     private TeacherRepository teacherRepository;
 
-    public AccessValidator(StudentRepository studentRepository) {
-        this.studentRepository = studentRepository;
+    public AccessValidator() {
+        this.studentRepository = new StudentRepository();
         this.teacherRepository = new TeacherRepository();
     }
 
-    public Student verifyStudentAccess(String code) {
-        System.out.println("size: " + this.studentRepository.getAllStudents().size());
-        return this.studentRepository.getStudentByCode(code);
+    public Boolean verifyStudentAccess(String code) {
+        List<Student> students = studentRepository.getAllStudents();
+        for(Student student:students){
+            if(student.getCode().equals(code)){
+                return true;
+            }
+        }
+        return false;
     }
 
-    public Teacher verifyTeacherAccess(String code) {
-        return this.teacherRepository.getTeacherByCode(code);
+    public Boolean verifyTeacherAccess(String code) {
+        List<Teacher> teachers = teacherRepository.getAllTeachers();
+        for(Teacher teacher:teachers){
+            if(teacher.getCode().equals(code)){
+                return true;
+            }
+        }
+        return false;
     }
 }

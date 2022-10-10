@@ -1,16 +1,15 @@
-package repositories;
+package Repositories;
 
-import models.Student;
-import models.Teacher;
-
-import java.util.ArrayList;
 import java.util.List;
+
+import Models.Teacher;
+import Services.ReadDataService;
 
 public class TeacherRepository {
     private List<Teacher> teachers;
 
     public TeacherRepository() {
-        this.teachers = new ArrayList<>();
+        this.teachers = new ReadDataService().readTeachersDataFromJson();
     }
 
     public List<Teacher> getAllTeachers() {

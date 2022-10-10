@@ -1,0 +1,46 @@
+[
+  {
+    "code": "ST-01-John",
+    "name": "John Doe",
+    "age": 11,
+    "education_level": "MIDDLE_SCHOOL",
+    "subjects": [
+      {
+        "Name": "MATHEMATICS",
+        "Grade": "A"
+      },
+      {
+        "Name": "PHYSICS",
+        "Grade": "B"
+      }
+    ]
+  },
+  {
+    "code": "ST-02-Tom",
+    "name": "Tom Lee",
+    "age": 14,
+    "education_level": "MIDDLE_SCHOOL",
+    "subjects": [
+      {
+        "Name": "MATHEMATICS",
+        "Grade": "D"
+      },
+      {
+        "Name": "SCIENCE",
+        "Grade": "A"
+      }
+    ]
+  },
+  {
+    "code": "TE-01-Maria",
+    "name": "Maria Smith",
+    "age": 35,
+    "education_level": "MIDDLE_SCHOOL",
+    "subjects": [
+      {
+        "Name": "MATHEMATICS",
+        "Grade": ""
+      }
+    ]
+  }
+]
